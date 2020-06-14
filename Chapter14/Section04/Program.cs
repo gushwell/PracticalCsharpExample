@@ -57,7 +57,7 @@ namespace Section04 {
 
         static void wc_DownloadProgressChanged(object sender,
                             DownloadProgressChangedEventArgs e) {
-            Console.WriteLine("{0}% {0}/{1}", e.ProgressPercentage,
+            Console.WriteLine("{0}% {1}/{2}", e.ProgressPercentage,
                               e.BytesReceived, e.TotalBytesToReceive);
         }
 
@@ -99,7 +99,7 @@ namespace Section04 {
                 var nodes = xdoc.Root.Descendants("title");
                 foreach (var node in nodes) {
                     string s = Regex.Replace(node.Value,"【|】", "");
-                    yield return node.Value;
+                    yield return s;
                 }
             }
         }

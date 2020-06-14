@@ -64,7 +64,7 @@ namespace Section05 {
 		public void CreateFromDirectory() {
             var sourceFolder = @"c:\Temp\zip";
             var archiveFile = @"c:\Archives\newArchive.zip";
-            ZipFile.CreateFromDirectory(sourceFolder, archiveFile, CompressionLevel.Fastest, includeBaseDirectory: false);
+            ZipFile.CreateFromDirectory(sourceFolder, archiveFile, CompressionLevel.Fastest, includeBaseDirectory: true);
 	    }
 
     }
